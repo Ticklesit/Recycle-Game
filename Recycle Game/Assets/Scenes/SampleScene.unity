@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 1868520783}
   - component: {fileID: 1868520785}
   - component: {fileID: 1868520784}
+  - component: {fileID: 1868520786}
   m_Layer: 5
   m_Name: displayBack
   m_TagString: Untagged
@@ -703,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20705767, g: 0.5698178, b: 0.9339623, a: 1}
+  m_Color: {r: 0.8158152, g: 0.8610314, b: 0.9150943, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -728,6 +729,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868520782}
   m_CullTransparentMesh: 1
+--- !u!114 &1868520786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868520782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8250021d4aae8ea419224958631ec757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backdrop: {fileID: 1868520784}
 --- !u!1 &2086710357
 GameObject:
   m_ObjectHideFlags: 0
