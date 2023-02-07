@@ -8,13 +8,26 @@ public class ColorChanger : MonoBehaviour
 {
     public TextMeshProUGUI timerRef;
     public Image backdrop;
-    void Awake()
+
+    void Start()
     {
-        backdrop.color = new Color32 (53,145,255,255);
+        ChangeColor(Color.green, 2.5f);
     }
 
-    public void ChangeColor(Color color)
+    private Coroutine currentColorChange;
+    public void ChangeColor(Color color, float duration)
+    {
+        if (currentColorChange != null){
+            StopCoroutine(currentColorChange);
+        }
+        currentColorChange = StartCoroutine(ChangeColorDuration(color, duration));
+    }
+
+    IEnumerator ChangeColorDuration(Color color, float duration)
     {
         backdrop.color = color;
+        yield return new WaitForSeconds(duration);
+        backdrop.color = new Color32 (53,145,255,255);
+        currentColorChange = null;
     }
 }
